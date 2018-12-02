@@ -11,6 +11,9 @@ Y_raw=t(electricity[,-1]) # make the response as a (sample size,number of observ
 n=nrow(Y_raw)
 T=ncol(Y_raw)
 
+# Load r functions for pre-smoothing
+source('C:/Users/u0124228/Downloads/R_functions_for_pre-smoothing.R') # Path of the R_functions_for_pre-smoothing.R file
+
 # Pre-smoothing step
 time_vector=seq(0,1,length=T) # observed times re-scailed on [0,1]
 eval_points=277 # number of evaluation time points for pre-smoothing
