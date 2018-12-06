@@ -1,4 +1,4 @@
-# R functions for pre-smoothing for electricity data
+# R functions for pre-smoothing
 
 # Kernel function for pre-smoothing
 K=function(x)
