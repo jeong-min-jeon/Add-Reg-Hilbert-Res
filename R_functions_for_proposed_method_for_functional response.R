@@ -46,7 +46,6 @@ get_h_candidate=function(X,add,cv,h_add,h_length)
 # Function giving index of splited data for cross-validation
 # n: sample size
 # cv: number of folds for cross-validation
-# only the last fold has a different number of observations
 new_cut=function(n,cv)
 {
   folds=c()
