@@ -4,8 +4,9 @@
 library(readxl)
 library(pracma)
 
-# Load necessary source file
-source('C:/Downloads/R_functions_for_proposed_method_for_functional_response.R')
+# Load necessary source files
+source('C:/Downloads/R_functions_for_pre-smoothing.R') # path for this file
+source('C:/Downloads/R_functions_for_proposed_method_for_functional_response.R') # path of for this file
 
 # Load necessary dll files
 dyn.load('C:/Downloads/CBS_continuous_L2.dll') # path of the CBS_continuous_L2.dll file
