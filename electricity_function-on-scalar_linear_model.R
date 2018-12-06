@@ -5,6 +5,9 @@ library(readxl)
 library(refund)
 library(pracma)
 
+# Load necessary source file
+source('C:/Downloads/R_functions_for_pre-smoothing.R') # path of the R_functions_for_pre-smoothing.R file
+
 # Get response
 electricity=read_xlsx('C:/Downloads/electricity.xlsx') # path of the electricity.xlsx file
 Y_raw=t(electricity[,-1]) # make response as a (sample size,number of observed  times) matrix
