@@ -1,3 +1,5 @@
+# R code for proposed method for election data
+
 library(Compositional)
 
 # Load necessary source file
