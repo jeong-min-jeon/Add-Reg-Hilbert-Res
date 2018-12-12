@@ -1,4 +1,4 @@
-# R functions for 4-dimensional propsed method for table 2
+# R functions for m(1,2,3,4) propsed method for table 2
 
 # Load necessary packages
 library(truncdist)
@@ -47,7 +47,7 @@ density_norm=function(d1,d2,time_vector)
   first_integral=c()
   for(t in 1:T)
   {
-    first_integral[t]=trapz(time_vector,(log(d1[time_vector]/d1[t])-log(d2[time_vector]/d2[t]))^2)
+    first_integral[t]=trapz(time_vector,(log(d1/d1[t])-log(d2/d2[t]))^2)
   }
   trapz(time_vector,first_integral)
 }
