@@ -66,7 +66,7 @@ for(k in 1:nfolds)
   Y_test=Y[s,]
   X_training=X[-s,]
   Y_training=Y[-s,]
-  optimal_h[k,]=CBS_simplex(X_training,Y_training,h_length=rep(41,d),h_add=rep(0.2,d))$optimal_h
+  optimal_h[k,]=CBS_simplex(X_training,Y_training,h_length=rep(41,d),h_add=rep(0.2,d))$optimal_h # Reduced bw grid for fast computation
   Y_hat[k,,]=SBF_simplex(X_test,X_training,Y_training,h=optimal_h[k,])$Y_hat
   temp_dist=c()
   for(i in 1:nrow(Y_test))
