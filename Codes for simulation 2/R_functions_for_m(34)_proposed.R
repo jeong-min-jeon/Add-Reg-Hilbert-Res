@@ -49,7 +49,7 @@ density_norm=function(d1,d2,time_vector)
   {
     first_integral[t]=trapz(time_vector,(log(d1/d1[t])-log(d2/d2[t]))^2)
   }
-  trapz(time_vector,first_integral)
+  trapz(time_vector,first_integral)/2
 }
 
 # Function for obtaining IMSE, ISB, IV
