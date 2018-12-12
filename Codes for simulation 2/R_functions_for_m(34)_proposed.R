@@ -1,4 +1,4 @@
-# R functions for m(3,4) propsed method for table 2
+# R functions for m(34) propsed method for table 2
 
 # Load necessary packages
 library(truncdist)
