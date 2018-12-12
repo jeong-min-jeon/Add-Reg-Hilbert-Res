@@ -56,7 +56,11 @@ comp_distance=function(y1,y2)
 # Index of 10 partitions of sample
 nfolds=10
 folds <- cut(1:n,breaks=nfolds,labels=FALSE)
+
+# For saving results
 optimal_h=matrix(,nrow=n,ncol=d)
+Y_hat=array(,dim=c(nfolds,25,T))
+error=c()
 
 # Get ASPE
 for(k in 1:nfolds)
