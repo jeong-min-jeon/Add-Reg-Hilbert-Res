@@ -107,7 +107,7 @@ CBS_simplex=function(X_training,Y_training,add=11,max_iteration=50,epsilon=10^-4
   h_candidate_matrix=result$h_candidate_matrix
   h_candidate_matrix[is.na(h_candidate_matrix)]=0
   
-  result=.Fortran('CBS_continuous_L2',n=n,d=d,T=T,X_training=X_training,Y_training=Y_training,
+  result=.Fortran('CBS_continuous_simplex',n=n,d=d,T=T,X_training=X_training,Y_training=Y_training,
                   h_vector=h_candidate_matrix,add=add,max_iteration=max_iteration,epsilon=epsilon,
                   ngrid_h=max(h_length),cv=cv,cv_test_size=cv_test_size,true_cd=as.integer(0),h_length=h_length,
                   max_cd_iteration=max_cbs_iteration,optimal_h=h_candidate_matrix[1,],
@@ -140,7 +140,7 @@ SBF_simplex=function(X_test,X_training,Y_training,add=11,max_iteration=30,epsilo
   yhat=matrix(0,N,T)
   mhat=array(0,dim=c(d,ngrid,T))
   
-  result=.Fortran('SBF_continuous_L2',n0=N,n=n,d=d,ngrid=ngrid,T=T,X0=X_test,X=X_training,Y=Y_training,g=g,h=h,
+  result=.Fortran('SBF_continuous_simplex',n0=N,n=n,d=d,ngrid=ngrid,T=T,X0=X_test,X=X_training,Y=Y_training,g=g,h=h,
                   max_iteration=max_iteration,epsilon=epsilon,actual_iteration=actual_iteration,
                   yhat=yhat,mhat=mhat)
   
