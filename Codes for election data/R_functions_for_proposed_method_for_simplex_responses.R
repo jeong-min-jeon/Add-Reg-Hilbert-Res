@@ -121,7 +121,7 @@ CBS_simplex=function(X_training,Y_training,add=11,max_iteration=50,epsilon=10^-4
 # max_iteration: maximum iteration number for Bochner smooth bacfkfitting algorithm
 # epsilon: convergence criterion for Bochner smooth backfitting algorithm
 # h: ncol(X_training)-dimensional vector of bandwidths
-SBF_simplex=function(X_test,X_training,Y_training,add=11,max_iteration=30,epsilon=10^-4,h)
+SBF_simplex=function(X_test,X_training,Y_training,add=11,max_iteration=50,epsilon=10^-4,h)
 {
   n=nrow(X_training)
   d=ncol(X_training)
