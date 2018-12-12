@@ -1,8 +1,5 @@
 # R code for proposed method for election data
 
-# Load necessary R package
-library(Compositional)
-
 # Load necessary source file
 source('C:/Downloads/R_functions_for_proposed_method_for_simplex_responses.R') # path of the file
 
