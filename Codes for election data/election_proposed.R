@@ -60,7 +60,7 @@ nfolds=10
 folds <- cut(1:n,breaks=nfolds,labels=FALSE)
 
 # For saving results
-optimal_h=matrix(,nrow=n,ncol=d)
+optimal_h=matrix(,nrow=nfolds,ncol=d)
 Y_hat=array(,dim=c(nfolds,25,T))
 error=c()
 
