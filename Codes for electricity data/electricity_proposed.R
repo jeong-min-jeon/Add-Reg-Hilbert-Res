@@ -46,9 +46,10 @@ for(j in 1:d)
   X[,j]=(X[,j]-min(X[,j]))/(max(X[,j])-min(X[,j]))
 }
 
+# For saving results
+optimal_h=matrix(,nrow=n,ncol=d)
 Y_hat=array(,dim=c(n,eval_points))
 error=c()
-optimal_h=matrix(,nrow=n,ncol=d)
 
 # Get ASPE
 for(k in 1:n)
