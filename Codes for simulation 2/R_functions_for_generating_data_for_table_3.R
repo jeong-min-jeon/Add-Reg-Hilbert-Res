@@ -53,7 +53,7 @@ f=function(x1,x2,x3,x4,e,time_vector)
   temp/trapz(time_vector,temp)
 }
 
-# Function for generating Y
+# Function for data generation
 # M: number of monte-carlo simulation
 # n: sample size
 # d: dimension of predictor
@@ -65,8 +65,6 @@ data_make=function(M,n,d,error_range,time_vector)
   X=array(runif(M*n*d),dim=c(M,n,d))
   e=matrix(runif(M*n,min=-error_range,max=error_range),M,n)
   T=length(time_vector)
-  t1=time_vector[1]
-  t2=time_vector[T]
   Y=array(,dim=c(M,n,T))
   for(j in 1:M)
   {
