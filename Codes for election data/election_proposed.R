@@ -1,7 +1,11 @@
 library(Compositional)
 
 # Load necessary source file
-source('C:/Downloads/R_functions_for_proposed_method_for_simplex_response.R')
+source('C:/Downloads/R_functions_for_proposed_method_for_simplex_responses.R')
+
+# Load necessary dll files
+dyn.load('C:/Downloads/CBS_continuous_simplex.dll') # path of the CBS_continuous_simplex.dll file
+dyn.load('C:/Downloads/SBF_continuous_simplex.dll') # path of the CBS_continuous_simplex.dll file
 
 # Get data
 raw_data <- read.csv("https://raw.githubusercontent.com/OhmyNews/2017-Election/master/170509_Elec_Data-utf8.csv")
