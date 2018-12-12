@@ -1,5 +1,6 @@
 # R code collecting other methods for election data
 
+# Load necessary package
 library(Compositional)
 
 # Get data
