@@ -1,4 +1,4 @@
-# R functions for functional k-nn for table 2
+# Kernel-based functional k-nn estimator for table 2
 
 # Load necessary package
 library(pracma)
