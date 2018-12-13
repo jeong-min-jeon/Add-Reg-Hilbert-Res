@@ -92,7 +92,7 @@ optimal_k_L2=function(X,Y,time_vector,nfolds,k_vec)
   Y=Y[s,]
   folds=cut(1:n,breaks=nfolds,labels=FALSE)
   error.fold=c()
-  error.h=c()
+  error.k=c()
   for(j in 1:length(k_vec))
   {
     for(k in 1:nfolds)
@@ -105,7 +105,7 @@ optimal_k_L2=function(X,Y,time_vector,nfolds,k_vec)
       if(length(which(folds==k))>1) error.fold[k]=sum(int(time_vector,(t(Y.test)-t(Y.test.hat))^2))
       if(length(which(folds==k))==1) error.fold[k]=trapz(time_vector,(Y.test-Y.test.hat)^2)
     }
-    error.h[j]=sum(error.fold)
+    error.k[j]=sum(error.fold)
   }
   return(k_vec[which(error.h==min(error.h))])
 }
