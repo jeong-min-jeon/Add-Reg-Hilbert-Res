@@ -1,4 +1,4 @@
-# R functions for proposed method with CBS for table 1 and 2
+# Proposed method with CBS for table 1 and 2
 
 # Load necessary package
 library(pracma)
