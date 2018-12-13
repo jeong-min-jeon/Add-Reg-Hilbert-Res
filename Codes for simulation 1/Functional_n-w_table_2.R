@@ -1,4 +1,4 @@
-# R functions for functional n-w for table 2
+# Functional n-w for table 2
 
 # Load necessary package
 library(pracma)
