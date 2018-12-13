@@ -101,7 +101,7 @@ optimal_k_L2=function(X,Y,time_vector,nfolds,k_vec)
       X.test=X[which(folds==k),]
       Y.training=Y[-which(folds==k),]
       Y.test=Y[which(folds==k),]
-      Y.test.hat=predict_knn(matrix(X.test,ncol=d),X.training,Y.training,k_vec[j])
+      Y.test.hat=predict_knn_L2(matrix(X.test,ncol=d),X.training,Y.training,k_vec[j])
       if(length(which(folds==k))>1) error.fold[k]=sum(int(time_vector,(t(Y.test)-t(Y.test.hat))^2))
       if(length(which(folds==k))==1) error.fold[k]=trapz(time_vector,(Y.test-Y.test.hat)^2)
     }
