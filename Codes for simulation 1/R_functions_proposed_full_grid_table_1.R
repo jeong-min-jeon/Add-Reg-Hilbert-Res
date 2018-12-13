@@ -1,4 +1,4 @@
-# R functions for proposed method with full grid search for table 1
+# Proposed method with full grid search for table 1
 
 # Load necessary package
 library(pracma)
