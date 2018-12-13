@@ -114,7 +114,7 @@ optimal_h_L2=function(X,Y,time_vector,nfolds,h_add,h_length)
       X.test=X[which(folds==k),]
       Y.training=Y[-which(folds==k),]
       Y.test=Y[which(folds==k),]
-      Y.test.hat=predict_nw(matrix(X.test,ncol=d),X.training,Y.training,h_vector[j])
+      Y.test.hat=predict_nw_L2(matrix(X.test,ncol=d),X.training,Y.training,h_vector[j])
       if(length(which(folds==k))>1) error.fold[k]=sum(int(time_vector,(t(Y.test)-t(Y.test.hat))^2))
       if(length(which(folds==k))==1) error.fold[k]=trapz(time_vector,(Y.test-Y.test.hat)^2)
     }
