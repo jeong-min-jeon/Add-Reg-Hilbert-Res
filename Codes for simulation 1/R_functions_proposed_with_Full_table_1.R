@@ -31,7 +31,7 @@ density_norm=function(d1,d2,time_vector)
 # h_add and h_length: d-dimensional vectors 
 # seq(min_h[j],min_h[j]+h_add[j],length=h_length[j]) will be the candidate set of j-th bandwidth
 # for some small bandwidth min_h[j]
-simulation_proposed=function(X,Y,test_X,test_Y,time_vector,h_length,h_add)
+simulation_proposed_with_full=function(X,Y,test_X,test_Y,time_vector,h_length,h_add)
 {
   M=dim(X)[1]
   n=dim(X)[2]
@@ -63,4 +63,4 @@ simulation_proposed=function(X,Y,test_X,test_Y,time_vector,h_length,h_add)
 }
 
 d=dim(data$X)[3]
-result=simulation_proposed(data$X,data$Y,data$test_X,data$test_Y,seq(-0.5,0.5,length=101),h_length=rep(21,d),h_add=rep(0.2,d))
+result=simulation_proposed_with_full(data$X,data$Y,data$test_X,data$test_Y,seq(-0.5,0.5,length=101),h_length=rep(21,d),h_add=rep(0.2,d))
