@@ -53,12 +53,12 @@ int<-function(x,y)
   ((x[index] - x[index-1]) %*% (y[index,] + y[index-1,])) / 2
 }
 
-# Function for prediction for the kernel-based functional k-nn
+# Function for prediction for the kernel-based k-nn for L2 response
 # x: target x (matrix whose column is the number of covariates)
 # X: observed X (matrix of size (sample size,the number of covariates))
 # Y: observed Y (matrix of size (sample size,the number of evaluation time points))
 # k: the number of nearest neighbors
-predict_knn=function(x,X,Y,k)
+predict_knn_L2=function(x,X,Y,k)
 {
   N=nrow(x)
   n=nrow(X)
@@ -77,13 +77,13 @@ predict_knn=function(x,X,Y,k)
   return(predict)
 }
 
-# Function for cross-validatory optimal k for the kernel-based functional k-nn
+# Function for cross-validatory optimal k for the kernel-based k-nn for L2 response
 # X: observed X (matrix of size (sample size,the number of covariates))
 # Y: observed Y (matrix of size (sample size,the number of evaluation time points))
 # time_vector: time vector for Y
 # nfolds: the number of folds for cross-validation
 # k_vec: vector of candidate k
-optimal_k=function(X,Y,time_vector,nfolds,k_vec)
+optimal_k_L2=function(X,Y,time_vector,nfolds,k_vec)
 {
   n=nrow(X)
   d=ncol(X)
@@ -118,8 +118,8 @@ k_selected=c()
 for(i in 1:n)
 {
   print(i)
-  k_selected[i]=optimal_k(X[-i,],Y[-i,],eval_vector,nfolds=10,k_vec=c(1:30))
-  Y_hat[i,]=predict_knn(matrix(X[i,],1,d),X[-i,],Y[-i,],k_selected[i])
+  k_selected[i]=optimal_k_L2(X[-i,],Y[-i,],eval_vector,nfolds=10,k_vec=c(1:30))
+  Y_hat[i,]=predict_knn_L2(matrix(X[i,],1,d),X[-i,],Y[-i,],k_selected[i])
   error[i]=trapz(eval_vector,(Y[i,]-Y_hat[i,])^2)
 }
 
