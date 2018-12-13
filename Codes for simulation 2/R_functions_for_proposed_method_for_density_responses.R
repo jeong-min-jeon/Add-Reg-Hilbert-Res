@@ -1,4 +1,4 @@
-# R functions for proposed method for table 3
+# R functions for proposed method for density responses
 
 # Load necessary packages
 library(pdist)
