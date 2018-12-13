@@ -53,12 +53,12 @@ int<-function(x,y)
   ((x[index] - x[index-1]) %*% (y[index,] + y[index-1,])) / 2
 }
 
-# Function for prediction for the functional n-w
+# Function for prediction for the n-w for L2 response
 # x: target x (matrix whose column is the number of covariates)
 # X: observed X (matrix of size (sample size,the number of covariates))
 # Y: observed Y (matrix of size (sample size,the number of evaluation time points))
 # h: bandwidth
-predict_nw=function(x,X,Y,h)
+predict_nw_L2=function(x,X,Y,h)
 {
   N=nrow(x)
   n=nrow(X)
@@ -75,14 +75,14 @@ predict_nw=function(x,X,Y,h)
   return(predict)
 }
 
-# Function for cross-validatory optimal h for the functional nw
+# Function for cross-validatory optimal h for the nw for L2 response
 # X: observed X (matrix of size (sample size,the number of covariates))
 # Y: observed Y (matrix of size (sample size,the number of evaluation time points))
 # time_vector: time vector for Y
 # nfolds: the number of folds for cross-validation
 # h_add and h_length: seq(min_h,min_h+h_add,length=h_length) will be the set of candidate bandwidths
 # for some small bandwidth min_h which makes kernel smoothing possible
-optimal_h=function(X,Y,time_vector,nfolds,h_add,h_length)
+optimal_h_L2=function(X,Y,time_vector,nfolds,h_add,h_length)
 {
   n=nrow(X)
   d=ncol(X)
@@ -136,14 +136,14 @@ for(i in 1:n)
   print(i)
   if(i!=95)
   {
-    h_selected[i]=optimal_h(X[-i,],Y[-i,],eval_vector,nfolds=10,h_add=0.2,h_length=201)$h_optimal
-    Y_hat[i,]=predict_nw(matrix(X[i,],ncol=d),X[-i,],Y[-i,],h_selected[i])
+    h_selected[i]=optimal_h_L2(X[-i,],Y[-i,],eval_vector,nfolds=10,h_add=0.2,h_length=201)$h_optimal
+    Y_hat[i,]=predict_nw_L2(matrix(X[i,],ncol=d),X[-i,],Y[-i,],h_selected[i])
     error[i]=trapz(eval_vector,(Y[i,]-Y_hat[i,])^2)
   }
   if(i==95)
   {
     h_selected[i]=min(as.matrix(pdist(matrix(X[i,],ncol=d),X[-i,])))+0.001
-    Y_hat[i,]=predict_nw(matrix(X[i,],ncol=d),X[-i,],Y[-i,],h_selected[i])
+    Y_hat[i,]=predict_nw_L2(matrix(X[i,],ncol=d),X[-i,],Y[-i,],h_selected[i])
     error[i]=trapz(eval_vector,(Y[i,]-Y_hat[i,])^2)
   }
 }
