@@ -40,7 +40,7 @@ for(j in 1:d)
   X[,j]=(X[,j]-min(X[,j]))/(max(X[,j])-min(X[,j]))
 }
 
-# Kernel function for the kernel-based functional k-nn
+# Kernel function for the nw
 K=function(x)
 {
   3/4*(1-x^2)*dunif(x,-1,1)*2
