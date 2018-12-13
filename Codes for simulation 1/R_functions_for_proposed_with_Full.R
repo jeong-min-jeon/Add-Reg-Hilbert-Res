@@ -4,11 +4,11 @@
 library(pracma)
 
 # Load necessary source file
-source('C:/Downloads/R_functions_for_proposed_method_with_full_grid_for_density_responses.R')
+source('C:/Downloads/R_functions_for_proposed_method_with_full_grid_for_density_responses.R') # path of the file
 
 # Load necessary dll files
-dyn.load('C:/Downloads/Full_grid_continuous_density.dll')
-dyn.load('C:/Downloads/SBF_continuous_density.dll')
+dyn.load('C:/Downloads/Full_grid_continuous_density.dll') # path of the dll file
+dyn.load('C:/Downloads/SBF_continuous_density.dll') # path of the dll file
 
 # Function for calculating the norm of density space
 density_norm=function(d1,d2,time_vector)
