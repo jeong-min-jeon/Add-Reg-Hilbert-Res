@@ -22,7 +22,7 @@ density_norm=function(d1,d2,time_vector)
   trapz(time_vector,first_integral)/2
 }
 
-# Function for obtaining IMSE, ISB, IV
+# Function for results
 # X: array for predictor of dimension (number of monte-carlo simulation(M) by training sample size(n) by dimension of predictor(d))
 # Y: array for response of dimension (number of monte-carlo(M) by training sample size(n) by number of evaluation time points(T))
 # test_X: array for predictor of dimension (number of monte-carlo simulation(M) by test sample size(N) by dimension of predictor(d))
