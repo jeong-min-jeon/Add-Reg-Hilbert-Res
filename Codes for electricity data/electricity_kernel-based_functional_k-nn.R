@@ -107,7 +107,7 @@ optimal_k_L2=function(X,Y,time_vector,nfolds,k_vec)
     }
     error.k[j]=sum(error.fold)
   }
-  return(k_vec[which(error.h==min(error.h))])
+  return(k_vec[which(error.k==min(error.k))])
 }
 
 Y_hat=matrix(,n,eval_points)
