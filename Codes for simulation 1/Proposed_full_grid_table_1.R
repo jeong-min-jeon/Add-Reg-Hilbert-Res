@@ -59,7 +59,7 @@ simulation_proposed_full_grid=function(X,Y,test_X,test_Y,time_vector,h_length,h_
     }
   }
   
-  return(list(optimal_h=optimal_h,Y_hat=Y_hat,error=error,time=t))
+  return(list(optimal_h=optimal_h,Y_hat=Y_hat,error=error,time=t/M))
 }
 
 d=dim(data$X)[3]
