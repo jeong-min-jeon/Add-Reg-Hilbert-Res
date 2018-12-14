@@ -34,11 +34,10 @@ predict_knn_density=function(x,X,Y,time_vector,k)
   T=ncol(Y)
   predict=matrix(,nrow=N,ncol=T)
   K_values=matrix(,nrow=N,ncol=n)
-  h=c()
   for(p in 1:N)
   {
-    h[p]=sort(as.matrix(pdist(x[p,],X)))[k]+0.001
-    K_values[p,]=K(as.matrix(pdist(x[p,],X))/h[p])
+    h=sort(as.matrix(pdist(x[p,],X)))[k]+0.001
+    K_values[p,]=K(as.matrix(pdist(x[p,],X))/h)
     below=sum(K_values[p,])
     upper=colProds(Y^K_values[p,])
     temporary=upper^{1/below}
