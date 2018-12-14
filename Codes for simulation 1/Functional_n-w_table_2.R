@@ -2,6 +2,7 @@
 
 # Load necessary package
 library(pracma)
+library(pdist)
 
 # Function for calculating the norm of density space
 density_norm=function(d1,d2,time_vector)
@@ -57,14 +58,14 @@ optimal_h_density=function(X,Y,time_vector,nfolds,h_add,h_length)
   n=nrow(X)
   d=ncol(X)
   s=sample(n)
-  X=X[s,]
+  X=matrix(X[s,],ncol=d)
   Y=Y[s,]
   folds=cut(1:n,breaks=nfolds,labels=FALSE)
   distance=c()
   for(k in 1:nfolds)
   {
     X.training=X[-which(folds==k),]
-    X.test=X[which(folds==k),]
+    X.test=matrix(X[which(folds==k),],ncol=d)
     new.distance=c()
     for(p in 1:nrow(X.test))
     {
