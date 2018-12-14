@@ -76,7 +76,6 @@ optimal_k_density=function(X,Y,time_vector,nfolds,k_vec)
       {
         error.fold[k]=error.fold[k]+density_norm(Y.test[i,],Y.test.hat[i,],time_vector)
       }
-      if(length(which(folds==k))==1) error.fold[k]=density_norm(Y.test,Y.test.hat,time_vector)
     }
     error.k[j]=sum(error.fold)
   }
