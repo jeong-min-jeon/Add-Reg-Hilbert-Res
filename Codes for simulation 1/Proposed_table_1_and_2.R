@@ -61,7 +61,7 @@ simulation_proposed=function(X,Y,test_X,test_Y,time_vector,h_length,h_add)
     }
   }
   
-  return(list(optimal_h=optimal_h,CBS_iteration=CBS_iteration,Y_hat=Y_hat,error=error,time=t))
+  return(list(optimal_h=optimal_h,CBS_iteration=CBS_iteration,Y_hat=Y_hat,error=error,time=t/M))
 }
 
 d=dim(data$X)[3]
