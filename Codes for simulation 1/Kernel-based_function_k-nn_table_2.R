@@ -15,7 +15,7 @@ density_norm=function(d1,d2,time_vector)
   trapz(time_vector,first_integral)/2
 }
 
-# Kernel function for the kernel-based functional k-nn
+# Kernel function for the kernel-based k-nn
 K=function(x)
 {
   3/4*(1-x^2)*dunif(x,-1,1)*2
