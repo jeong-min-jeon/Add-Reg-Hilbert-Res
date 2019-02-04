@@ -39,6 +39,7 @@ for(i in 1:n)
 X1=read_xlsx('C:/Downloads/temperature.xlsx')[,2] # path of the temperature.xlsx file
 X2=read_xlsx('C:/Downloads/cloudiness.xlsx')[,2] # path of the cloudiness.xlsx file
 X=cbind(X1,X2)
+X=as.matrix(X)
 d=ncol(X)
 
 # Re-scale X for it to take values in [0,1]^d
