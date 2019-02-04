@@ -14,7 +14,7 @@ N=108;
 Yhat=[];
 new_mu=[];
 
-% To run the following code, one needs to load temperature, cloudiness and electricity data
+% To run the following code, one needs to load temperature, cloudiness and electricity data in advance
 for i=1:N;
 disp(i);
     % Predictor
