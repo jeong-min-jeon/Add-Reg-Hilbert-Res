@@ -1,6 +1,4 @@
 Some errors in the previous codes are corrected. For example, missing R libraries and source files are added.
-Also, in the codes for analyzing electicity data, X is converted to a matrix. This fixes existing errors.
-However, all the changes do not influence on the results in the paper.
-Those errors occured in the process of organizing and summarizing the codes for the publification.
-We sincerely appologize for the errors in the codes uploaded first.
-Sorry and thank you.
+Also, in the codes for analyzing electicity data, X is converted to a matrix. This also fixes some of the existing errors.
+However, all the corrections do not influence on the results in the paper because those errors are occurred in the process of organizing and summarizing the codes for the publification.
+We sincerely appologize for the errors in the codes uploaded first. Sorry and thank you.
