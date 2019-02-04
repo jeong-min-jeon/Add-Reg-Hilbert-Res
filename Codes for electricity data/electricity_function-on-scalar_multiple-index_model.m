@@ -17,7 +17,7 @@ new_mu=[];
 % To run the following code, one needs to load temperature, cloudiness and electricity data in advance
 for i=1:N;
 disp(i);
-    % Predictor
+    % Collect predictors as X
     X=horzcat(temperature,cloudiness);
     newX=X(i,:);
     X(i,:)=[];
