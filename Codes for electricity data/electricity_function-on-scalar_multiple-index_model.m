@@ -1,7 +1,7 @@
 % This is a Matlab code
 
 % Load the matlab package downloaded from https://github.com/functionaldata/PACE_matlab
-addpath(genpath('C:/Downloads/release2.17/'));
+addpath(genpath('C:/Downloads/release2.17/')); % Path of the package
 
 % Define necessary objects
 Time=277;
