@@ -6,6 +6,7 @@ library(pracma)
 
 # Load necessary source file
 source('C:/Downloads/R_functions_for_proposed_method_for_functional_responses.R')
+source('C:/Downloads/R_functions_for_pre-smoothing.R')
 
 # Load necessary dll files
 dyn.load('C:/Downloads/CBS_continuous_L2.dll') # path of the CBS_continuous_L2.dll file
@@ -35,8 +36,8 @@ for(i in 1:n)
 }
 
 # Get predictor
-X1=read_xlsx('C:/Users/u0124228/Downloads/temperature.xlsx')[,2] # path of the temperature.xlsx file
-X2=read_xlsx('C:/Users/u0124228/Downloads/cloudiness.xlsx')[,2] # path of the cloudiness.xlsx file
+X1=read_xlsx('C:/Downloads/temperature.xlsx')[,2] # path of the temperature.xlsx file
+X2=read_xlsx('C:/Downloads/cloudiness.xlsx')[,2] # path of the cloudiness.xlsx file
 X=cbind(X1,X2)
 d=ncol(X)
 
