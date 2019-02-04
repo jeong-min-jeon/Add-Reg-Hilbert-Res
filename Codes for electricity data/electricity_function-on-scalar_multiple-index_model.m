@@ -1,7 +1,8 @@
 % This is a Matlab code
+% This is slow
 
 % Load the matlab package downloaded from https://github.com/functionaldata/PACE_matlab
-addpath(genpath('C:/Downloads/release2.17/')); % Path of the package
+addpath(genpath('C:/Downloads/release2.17/')); % Path of the package file 'release2.17'
 
 % Define necessary objects
 Time=277;
@@ -14,7 +15,7 @@ N=108;
 Yhat=[];
 new_mu=[];
 
-% To run the following code, one needs to load temperature, cloudiness and electricity data in advance
+% To run the following code, one needs to load temperature, cloudiness and electricity excel files in advance
 for i=1:N;
 disp(i);
     % Collect predictors as X
