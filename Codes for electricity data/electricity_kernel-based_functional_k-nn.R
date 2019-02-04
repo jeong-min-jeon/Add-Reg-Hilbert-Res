@@ -6,7 +6,7 @@ library(pracma)
 library(pdist)
 
 # Load necessary source file
-source('C:/Users/u0124228/Desktop/R_functions_for_pre-smoothing.R')
+source('C:/Downloads/R_functions_for_pre-smoothing.R')
 
 # Get response
 electricity=read_xlsx('C:/Downloads/electricity.xlsx') # path of the electricity.xlsx file
@@ -32,8 +32,8 @@ for(i in 1:n)
 }
 
 # Get predictor
-X1=read_xlsx('C:/Users/u0124228/Downloads/temperature.xlsx')[,2] # path of the temperature.xlsx file
-X2=read_xlsx('C:/Users/u0124228/Downloads/cloudiness.xlsx')[,2] # path of the cloudiness.xlsx file
+X1=read_xlsx('C:/Downloads/temperature.xlsx')[,2] # path of the temperature.xlsx file
+X2=read_xlsx('C:/Downloads/cloudiness.xlsx')[,2] # path of the cloudiness.xlsx file
 X=cbind(X1,X2)
 d=ncol(X)
 
