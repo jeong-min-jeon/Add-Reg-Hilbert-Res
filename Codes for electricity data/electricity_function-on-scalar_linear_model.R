@@ -1,4 +1,4 @@
-# R code for function-on-scalar additive model by Scheipl et al. (2015) for electricity data
+# R code for function-on-scalar linear model by Scheipl et al. (2015) for electricity data
 
 # Load necessary packages
 library(readxl)
