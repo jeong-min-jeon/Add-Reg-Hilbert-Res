@@ -6,7 +6,7 @@ library(refund)
 library(pracma)
 
 # Load necessary source file
-source('C:/Users/u0124228/Desktop/R_functions_for_pre-smoothing.R')
+source('C:/Downloads/R_functions_for_pre-smoothing.R')
 
 # Get response
 electricity=read_xlsx('C:/Downloads/electricity.xlsx') # path of the electricity.xlsx file
