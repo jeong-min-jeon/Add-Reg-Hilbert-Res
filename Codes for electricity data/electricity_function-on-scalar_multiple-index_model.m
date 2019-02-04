@@ -1,5 +1,9 @@
+% Matlab code
+
+% Load package for this method
 addpath(genpath('C:/release2.17/'));
-%%
+
+% Define necessary objects
 Time=277;
 n=107;
 base=(1:Time)';
@@ -9,6 +13,7 @@ Tcell=mat2cell(T',1,Ni);
 N=108;
 Yhat=[];
 new_mu=[];
+
 %%
 for i=1:N;
     disp(i);
