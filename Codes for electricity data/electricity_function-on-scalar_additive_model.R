@@ -1,4 +1,5 @@
 # R code for function-on-scalar additive model by Scheipl et al. (2015) for electricity data
+# This is very slow (May take several hours for one prediction)
 
 # Load necessary packages
 library(readxl)
