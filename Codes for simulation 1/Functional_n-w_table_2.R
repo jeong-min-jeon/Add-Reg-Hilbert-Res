@@ -3,6 +3,7 @@
 # Load necessary package
 library(pracma)
 library(pdist)
+library(matrixStats)
 
 # Function for calculating the norm of density space
 density_norm=function(d1,d2,time_vector)
