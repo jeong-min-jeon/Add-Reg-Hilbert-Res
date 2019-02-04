@@ -16,7 +16,7 @@ new_mu=[];
 
 %%
 for i=1:N;
-    disp(i);
+disp(i);
     % Predictor
     X=horzcat(temperature,cloudiness);
     newX=X(i,:);
