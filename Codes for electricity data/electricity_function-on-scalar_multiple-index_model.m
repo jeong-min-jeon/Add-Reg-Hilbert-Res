@@ -1,7 +1,7 @@
-% Matlab code
+% This is a Matlab code
 
-% Load package for this method
-addpath(genpath('C:/release2.17/'));
+% Load the matlab package downloaded from https://github.com/functionaldata/PACE_matlab
+addpath(genpath('C:/Downloads/release2.17/'));
 
 % Define necessary objects
 Time=277;
@@ -14,7 +14,7 @@ N=108;
 Yhat=[];
 new_mu=[];
 
-%%
+% To run the following code, one needs to load temperature, cloudiness and electricity data
 for i=1:N;
 disp(i);
     % Predictor
