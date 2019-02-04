@@ -1,4 +1,5 @@
 # R code for function-on-scalar linear model by Scheipl et al. (2015) for electricity data
+# This is slow (But, faster than function-on-scalar additive model by Scheipl et al. (2015))
 
 # Load necessary packages
 library(readxl)
