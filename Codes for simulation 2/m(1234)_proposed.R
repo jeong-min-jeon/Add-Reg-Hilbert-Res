@@ -67,7 +67,7 @@ simulation_proposed=function(X,Y,time_vector,h_length,h_add)
   T=length(time_vector)
   
   # Defining true component maps
-  x_add=101
+  x_add=51
   grid=seq(0,1,length=x_add)
   grid_matrix=matrix(rep(grid,d),ncol=d)
   m_true=array(,dim=c(d,x_add,T))
