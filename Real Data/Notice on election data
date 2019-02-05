@@ -1,5 +1,6 @@
-Election data analyzed in the paper is not uploaded in this github because the data exists in https://github.com/OhmyNews/2017-Election.
-This is a github website of the Korean newpaper company 'oh my news'.
-They collected the data from several goverment websites. Therefore, the data is official.
-Although the website is written in Korean, important columns names can be checked in English in our analyzing codes.
-Please see the folder 'Codes for election data'
+The election data analyzed in our paper is not uploaded in this github because the original data exists in 
+https://github.com/OhmyNews/2017-Election. This is a github website of the Korean newspaper company 'oh my news'. 
+There, they described how they collected the data. They collected the data from several goverment websites. 
+Therefore, the data is official.
+Although the data description therein is written in Korean, important column names can be checked in English in our analyzing codes.
+Please see the folder 'Codes for election data'.
