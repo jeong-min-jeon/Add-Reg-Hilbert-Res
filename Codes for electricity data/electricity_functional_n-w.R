@@ -98,7 +98,7 @@ optimal_h_L2=function(X,Y,time_vector,nfolds,h_add,h_length)
   for(k in 1:nfolds)
   {
     X.training=X[-which(folds==k),]
-    X.test=X[which(folds==k),]
+    X.test=matrix(X[which(folds==k),],ncol=d)
     new.distance=c()
     for(p in 1:nrow(X.test))
     {
