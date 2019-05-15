@@ -1,8 +1,0 @@
-Several errors in the first uploaded codes were corrected. For example, missing R libraries and source files were added.
-Also, the fortran dll files for density responses are modified.
-In addition, in the codes for analyzing electicity data, X is converted to a matrix. This also fixed some errors.
-However, all the corrections do not influence on the results in the paper
-because those errors are occurred in the process of organizing and summarizing the codes for publication.
-We note that results obtained by running these codes are slightly different to the results in the paper because of cross-validation effect.
-We sincerely appologize for the errors in the previous codes.
-Sorry and thank you.
