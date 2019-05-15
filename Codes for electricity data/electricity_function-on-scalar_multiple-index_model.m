@@ -23,7 +23,7 @@ disp(i);
     newX=X(i,:);
     X(i,:)=[];
     % Response
-    Y=electricity;
+    Y=electricity';
     Y(i,:)=[];
     Y = reshape(Y',[1,n*Time]);
     Ycell=mat2cell(Y,1,Ni);
