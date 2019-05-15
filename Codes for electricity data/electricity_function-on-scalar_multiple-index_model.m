@@ -1,5 +1,7 @@
 % This is a Matlab code
 % This is slow
+% Load temperature whose dimension is (108,1) and cloudiness whose dimension is (108,1) from the xlsx files before run the code
+% Load pre_smoothed_Y whose dimension is (108,277) before run the code
 
 % Load the matlab package downloaded from https://github.com/functionaldata/PACE_matlab
 addpath(genpath('C:/Downloads/release2.17/')); % Path of the package file 'release2.17'
@@ -23,7 +25,7 @@ disp(i);
     newX=X(i,:);
     X(i,:)=[];
     % Response
-    Y=electricity';
+    Y=pre_smoothed_Y;
     Y(i,:)=[];
     Y = reshape(Y',[1,n*Time]);
     Ycell=mat2cell(Y,1,Ni);
