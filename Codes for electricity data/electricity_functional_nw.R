@@ -1,4 +1,4 @@
-# R code for function-on-scalar n-w estimator for electricity data
+# R code for function-on-scalar nw estimator for electricity data
 
 # Load necessary packages
 library(readxl)
@@ -57,7 +57,7 @@ int<-function(x,y)
   ((x[index] - x[index-1]) %*% (y[index,] + y[index-1,])) / 2
 }
 
-# Function for prediction for the n-w for L2 response
+# Function for prediction for the nw for L2 response
 # x: target x (matrix whose column is the number of covariates)
 # X: observed X (matrix of size (sample size,the number of covariates))
 # Y: observed Y (matrix of size (sample size,the number of evaluation time points))
