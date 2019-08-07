@@ -1,4 +1,4 @@
-# m(3,4) propsed method for table 3
+# m(3,4) propsed method for table 5
 
 # Load necessary packages
 library(truncdist)
