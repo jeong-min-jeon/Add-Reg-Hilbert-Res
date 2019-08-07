@@ -1,4 +1,4 @@
-# R functions for generating data for Table 3
+# R functions for generating data for Table 5
 
 # Load necessary packages
 library(truncdist)
